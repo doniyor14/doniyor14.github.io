@@ -1,10 +1,581 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSINT Hub — Ultimate Open-Source Intelligence Portal</title>
+  <meta name="description" content="The ultimate OSINT resource portal — tools, guides, links, and methodologies for open-source intelligence investigations.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Hi</h1>
+
+<div id="reading-progress"></div>
+
+<!-- TOP NOTICE -->
+<div class="top-bar">⚠️ For educational and lawful research purposes only. Always respect privacy laws and platform TOS.</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      OSINT Hub
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <div class="nav-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" placeholder="Search tools, guides…" autocomplete="off">
+    </div>
+  </div>
+</nav>
+
+<div id="search-results"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🔭 Open-Source Intelligence Portal</div>
+  <h1>The Ultimate OSINT Hub</h1>
+  <p>Every tool, guide, and resource you need for open-source intelligence — organized, searchable, and free.</p>
+
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Tools &amp; Links</span></div>
+    <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Categories</span></div>
+    <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Guides</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Free to Use</span></div>
+  </div>
+
+  <div class="hero-search">
+    <input type="text" class="search-input" placeholder="Search tools, techniques, or topics…" autocomplete="off">
+    <button type="button">Search</button>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+  <div class="container">
+
+    <!-- ========== QUICK LAUNCH ========== -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-icon ic-blue">⚡</div>
+        <h2>Quick Launch — Top Tools</h2>
+      </div>
+      <div class="cards-grid cards-grid-sm">
+
+        <a class="card" href="https://www.shodan.io" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-blue">🖥️</div>
+            <div><div class="card-title">Shodan</div><div class="card-desc">Search engine for IoT devices, servers &amp; industrial systems.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag freemium">Freemium</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://osintframework.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-green">🌐</div>
+            <div><div class="card-title">OSINT Framework</div><div class="card-desc">Comprehensive mind-map of OSINT tools organised by category.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://haveibeenpwned.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-red">🔐</div>
+            <div><div class="card-title">Have I Been Pwned</div><div class="card-desc">Check if your email or phone appeared in a data breach.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://hunter.io" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-orange">📧</div>
+            <div><div class="card-title">Hunter.io</div><div class="card-desc">Find professional email addresses for any company.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag freemium">Freemium</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://www.maltego.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-purple">🔗</div>
+            <div><div class="card-title">Maltego</div><div class="card-desc">Graphical link analysis and data mining platform.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag freemium">Freemium</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://web.archive.org" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-yellow">📚</div>
+            <div><div class="card-title">Wayback Machine</div><div class="card-desc">Browse 860+ billion saved web pages across history.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://www.virustotal.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-red">🦠</div>
+            <div><div class="card-title">VirusTotal</div><div class="card-desc">Analyse URLs, IPs, files and domains for malware.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+        </a>
+
+        <a class="card" href="https://censys.io" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-teal">🔍</div>
+            <div><div class="card-title">Censys</div><div class="card-desc">Internet-wide scanning — certificates, hosts, websites.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag freemium">Freemium</span><span class="tag web">Web</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ========== PEOPLE SEARCH ========== -->
+    <section class="section-block" id="people">
+      <div class="section-header">
+        <div class="section-icon ic-blue">👤</div>
+        <h2>People Search</h2>
+        <span class="badge">12 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.spokeo.com" target="_blank" rel="noopener"><span class="link-favicon">🔎</span><span class="link-name">Spokeo</span><span class="link-desc">People &amp; contact lookup</span></a>
+        <a class="link-item" href="https://www.truepeoplesearch.com" target="_blank" rel="noopener"><span class="link-favicon">👁️</span><span class="link-name">TruePeopleSearch</span><span class="link-desc">Free people search</span></a>
+        <a class="link-item" href="https://www.fastpeoplesearch.com" target="_blank" rel="noopener"><span class="link-favicon">⚡</span><span class="link-name">FastPeopleSearch</span><span class="link-desc">Instant people lookup</span></a>
+        <a class="link-item" href="https://pipl.com" target="_blank" rel="noopener"><span class="link-favicon">🌐</span><span class="link-name">Pipl</span><span class="link-desc">Deep web people search</span></a>
+        <a class="link-item" href="https://www.whitepages.com" target="_blank" rel="noopener"><span class="link-favicon">📖</span><span class="link-name">Whitepages</span><span class="link-desc">Phone, address &amp; people</span></a>
+        <a class="link-item" href="https://www.zabasearch.com" target="_blank" rel="noopener"><span class="link-favicon">🗂️</span><span class="link-name">ZabaSearch</span><span class="link-desc">Free people search engine</span></a>
+        <a class="link-item" href="https://www.instantcheckmate.com" target="_blank" rel="noopener"><span class="link-favicon">✅</span><span class="link-name">Instant Checkmate</span><span class="link-desc">Background check service</span></a>
+        <a class="link-item" href="https://www.intelius.com" target="_blank" rel="noopener"><span class="link-favicon">📋</span><span class="link-name">Intelius</span><span class="link-desc">People finder &amp; background</span></a>
+        <a class="link-item" href="https://www.peoplefinder.com" target="_blank" rel="noopener"><span class="link-favicon">🔭</span><span class="link-name">PeopleFinder</span><span class="link-desc">Address &amp; phone search</span></a>
+        <a class="link-item" href="https://411.com" target="_blank" rel="noopener"><span class="link-favicon">📞</span><span class="link-name">411.com</span><span class="link-desc">Phone &amp; address lookup</span></a>
+        <a class="link-item" href="https://www.beenverified.com" target="_blank" rel="noopener"><span class="link-favicon">🛡️</span><span class="link-name">BeenVerified</span><span class="link-desc">Comprehensive background checks</span></a>
+        <a class="link-item" href="https://thatsthem.com" target="_blank" rel="noopener"><span class="link-favicon">👥</span><span class="link-name">ThatsThem</span><span class="link-desc">Reverse email/IP/name lookup</span></a>
+      </div>
+    </section>
+
+    <!-- ========== USERNAME / SOCIAL MEDIA ========== -->
+    <section class="section-block" id="username">
+      <div class="section-header">
+        <div class="section-icon ic-purple">🎭</div>
+        <h2>Username &amp; Social Media</h2>
+        <span class="badge">14 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.namechk.com" target="_blank" rel="noopener"><span class="link-favicon">🏷️</span><span class="link-name">Namechk</span><span class="link-desc">Username availability checker</span></a>
+        <a class="link-item" href="https://whatsmyname.app" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">WhatsMyName</span><span class="link-desc">Username enumeration across sites</span></a>
+        <a class="link-item" href="https://usersearch.org" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">UserSearch.org</span><span class="link-desc">Search username on 2000+ sites</span></a>
+        <a class="link-item" href="https://www.social-searcher.com" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">Social Searcher</span><span class="link-desc">Social media search engine</span></a>
+        <a class="link-item" href="https://knowem.com" target="_blank" rel="noopener"><span class="link-favicon">🌟</span><span class="link-name">KnowEm</span><span class="link-desc">Username on 500+ social networks</span></a>
+        <a class="link-item" href="https://twitter.com/search" target="_blank" rel="noopener"><span class="link-favicon">🐦</span><span class="link-name">X (Twitter) Search</span><span class="link-desc">Advanced tweet search</span></a>
+        <a class="link-item" href="https://www.instagram.com" target="_blank" rel="noopener"><span class="link-favicon">📸</span><span class="link-name">Instagram</span><span class="link-desc">Profile &amp; tag search</span></a>
+        <a class="link-item" href="https://www.linkedin.com/search" target="_blank" rel="noopener"><span class="link-favicon">💼</span><span class="link-name">LinkedIn Search</span><span class="link-desc">Professional profile lookup</span></a>
+        <a class="link-item" href="https://github.com/search" target="_blank" rel="noopener"><span class="link-favicon">🐙</span><span class="link-name">GitHub Search</span><span class="link-desc">Code, users &amp; repos</span></a>
+        <a class="link-item" href="https://www.reddit.com/search" target="_blank" rel="noopener"><span class="link-favicon">🤖</span><span class="link-name">Reddit Search</span><span class="link-desc">Posts &amp; user profiles</span></a>
+        <a class="link-item" href="https://vk.com" target="_blank" rel="noopener"><span class="link-favicon">🇷🇺</span><span class="link-name">VKontakte</span><span class="link-desc">Russian social network</span></a>
+        <a class="link-item" href="https://t.me" target="_blank" rel="noopener"><span class="link-favicon">✈️</span><span class="link-name">Telegram</span><span class="link-desc">Channel &amp; user search</span></a>
+        <a class="link-item" href="https://tiktok.com" target="_blank" rel="noopener"><span class="link-favicon">🎵</span><span class="link-name">TikTok</span><span class="link-desc">Video &amp; user search</span></a>
+        <a class="link-item" href="https://www.snapchat.com" target="_blank" rel="noopener"><span class="link-favicon">👻</span><span class="link-name">Snapchat</span><span class="link-desc">Story &amp; map search</span></a>
+      </div>
+    </section>
+
+    <!-- ========== EMAIL ========== -->
+    <section class="section-block" id="email">
+      <div class="section-header">
+        <div class="section-icon ic-orange">📧</div>
+        <h2>Email Investigation</h2>
+        <span class="badge">10 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://hunter.io" target="_blank" rel="noopener"><span class="link-favicon">🎯</span><span class="link-name">Hunter.io</span><span class="link-desc">Find &amp; verify email addresses</span></a>
+        <a class="link-item" href="https://haveibeenpwned.com" target="_blank" rel="noopener"><span class="link-favicon">💥</span><span class="link-name">Have I Been Pwned</span><span class="link-desc">Email in data breach check</span></a>
+        <a class="link-item" href="https://emailrep.io" target="_blank" rel="noopener"><span class="link-favicon">📊</span><span class="link-name">EmailRep</span><span class="link-desc">Email reputation &amp; risk score</span></a>
+        <a class="link-item" href="https://app.snov.io" target="_blank" rel="noopener"><span class="link-favicon">🔌</span><span class="link-name">Snov.io</span><span class="link-desc">Email finder &amp; verifier</span></a>
+        <a class="link-item" href="https://www.email-format.com" target="_blank" rel="noopener"><span class="link-favicon">📐</span><span class="link-name">Email Format</span><span class="link-desc">Company email format lookup</span></a>
+        <a class="link-item" href="https://verify-email.org" target="_blank" rel="noopener"><span class="link-favicon">✅</span><span class="link-name">Verify Email</span><span class="link-desc">Free email validation</span></a>
+        <a class="link-item" href="https://www.voilanorbert.com" target="_blank" rel="noopener"><span class="link-favicon">🧙</span><span class="link-name">Voilà Norbert</span><span class="link-desc">Find anyone's email address</span></a>
+        <a class="link-item" href="https://www.skymem.info" target="_blank" rel="noopener"><span class="link-favicon">🌤️</span><span class="link-name">SkyMem</span><span class="link-desc">Search email in databases</span></a>
+        <a class="link-item" href="https://epieos.com" target="_blank" rel="noopener"><span class="link-favicon">🕵️</span><span class="link-name">Epieos</span><span class="link-desc">OSINT by email — accounts &amp; leaks</span></a>
+        <a class="link-item" href="https://www.melissa.com/v2/lookups/emailcheck" target="_blank" rel="noopener"><span class="link-favicon">📮</span><span class="link-name">Melissa Email Check</span><span class="link-desc">Email verification service</span></a>
+      </div>
+    </section>
+
+    <!-- ========== PHONE NUMBERS ========== -->
+    <section class="section-block" id="phone">
+      <div class="section-header">
+        <div class="section-icon ic-green">📱</div>
+        <h2>Phone Number Lookup</h2>
+        <span class="badge">8 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.truecaller.com" target="_blank" rel="noopener"><span class="link-favicon">📞</span><span class="link-name">Truecaller</span><span class="link-desc">Global phone number lookup</span></a>
+        <a class="link-item" href="https://spydialer.com" target="_blank" rel="noopener"><span class="link-favicon">🕵️</span><span class="link-name">Spy Dialer</span><span class="link-desc">Free reverse phone lookup</span></a>
+        <a class="link-item" href="https://www.numlookup.com" target="_blank" rel="noopener"><span class="link-favicon">🔢</span><span class="link-name">NumLookup</span><span class="link-desc">Free phone number lookup</span></a>
+        <a class="link-item" href="https://phonevalidator.com" target="_blank" rel="noopener"><span class="link-favicon">✅</span><span class="link-name">Phone Validator</span><span class="link-desc">Phone line type &amp; carrier</span></a>
+        <a class="link-item" href="https://www.whitepages.com/reverse-phone" target="_blank" rel="noopener"><span class="link-favicon">📖</span><span class="link-name">Whitepages Reverse</span><span class="link-desc">Reverse phone directory</span></a>
+        <a class="link-item" href="https://www.calleridtest.com" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">CallerID Test</span><span class="link-desc">Caller ID verification</span></a>
+        <a class="link-item" href="https://www.twilio.com/lookup" target="_blank" rel="noopener"><span class="link-favicon">🔧</span><span class="link-name">Twilio Lookup</span><span class="link-desc">Phone type &amp; carrier API</span></a>
+        <a class="link-item" href="https://www.searchpeopledirectory.com" target="_blank" rel="noopener"><span class="link-favicon">🗂️</span><span class="link-name">SearchPeopleDir</span><span class="link-desc">Phone &amp; people directory</span></a>
+      </div>
+    </section>
+
+    <!-- ========== IP / DOMAIN / NETWORK ========== -->
+    <section class="section-block" id="network">
+      <div class="section-header">
+        <div class="section-icon ic-teal">🌐</div>
+        <h2>IP, Domain &amp; Network</h2>
+        <span class="badge">16 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.shodan.io" target="_blank" rel="noopener"><span class="link-favicon">🖥️</span><span class="link-name">Shodan</span><span class="link-desc">IoT &amp; device search engine</span></a>
+        <a class="link-item" href="https://censys.io" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Censys</span><span class="link-desc">Host, cert &amp; website scanner</span></a>
+        <a class="link-item" href="https://dnsdumpster.com" target="_blank" rel="noopener"><span class="link-favicon">🌳</span><span class="link-name">DNSDumpster</span><span class="link-desc">DNS recon &amp; subdomain map</span></a>
+        <a class="link-item" href="https://viewdns.info" target="_blank" rel="noopener"><span class="link-favicon">👁️</span><span class="link-name">ViewDNS</span><span class="link-desc">Reverse IP, WHOIS, DNS lookup</span></a>
+        <a class="link-item" href="https://who.is" target="_blank" rel="noopener"><span class="link-favicon">📋</span><span class="link-name">Who.is</span><span class="link-desc">Domain WHOIS lookup</span></a>
+        <a class="link-item" href="https://ipinfo.io" target="_blank" rel="noopener"><span class="link-favicon">📍</span><span class="link-name">IPInfo.io</span><span class="link-desc">IP geolocation &amp; ASN info</span></a>
+        <a class="link-item" href="https://www.virustotal.com" target="_blank" rel="noopener"><span class="link-favicon">🛡️</span><span class="link-name">VirusTotal</span><span class="link-desc">URL &amp; domain malware scan</span></a>
+        <a class="link-item" href="https://urlscan.io" target="_blank" rel="noopener"><span class="link-favicon">🔬</span><span class="link-name">URLScan.io</span><span class="link-desc">Sandbox URL scanner</span></a>
+        <a class="link-item" href="https://securitytrails.com" target="_blank" rel="noopener"><span class="link-favicon">🔑</span><span class="link-name">SecurityTrails</span><span class="link-desc">DNS history &amp; domain intel</span></a>
+        <a class="link-item" href="https://www.robtex.com" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">Robtex</span><span class="link-desc">IP/DNS graph-based lookup</span></a>
+        <a class="link-item" href="https://bgp.he.net" target="_blank" rel="noopener"><span class="link-favicon">🗺️</span><span class="link-name">Hurricane Electric BGP</span><span class="link-desc">ASN, BGP &amp; routing data</span></a>
+        <a class="link-item" href="https://www.abuseipdb.com" target="_blank" rel="noopener"><span class="link-favicon">🚨</span><span class="link-name">AbuseIPDB</span><span class="link-desc">IP reputation &amp; abuse reports</span></a>
+        <a class="link-item" href="https://threatintelligenceplatform.com" target="_blank" rel="noopener"><span class="link-favicon">⚠️</span><span class="link-name">TIP</span><span class="link-desc">Threat intelligence platform</span></a>
+        <a class="link-item" href="https://www.dnslytics.com" target="_blank" rel="noopener"><span class="link-favicon">📊</span><span class="link-name">DNSlytics</span><span class="link-desc">Reverse DNS &amp; analytics</span></a>
+        <a class="link-item" href="https://crt.sh" target="_blank" rel="noopener"><span class="link-favicon">📜</span><span class="link-name">crt.sh</span><span class="link-desc">Certificate transparency log</span></a>
+        <a class="link-item" href="https://www.ripe.net" target="_blank" rel="noopener"><span class="link-favicon">🌍</span><span class="link-name">RIPE NCC</span><span class="link-desc">IP &amp; ASN registration data</span></a>
+      </div>
+    </section>
+
+    <!-- ========== IMAGE / VIDEO ========== -->
+    <section class="section-block" id="images">
+      <div class="section-header">
+        <div class="section-icon ic-pink">🖼️</div>
+        <h2>Image &amp; Video Analysis</h2>
+        <span class="badge">10 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://tineye.com" target="_blank" rel="noopener"><span class="link-favicon">👁️</span><span class="link-name">TinEye</span><span class="link-desc">Reverse image search engine</span></a>
+        <a class="link-item" href="https://images.google.com" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Google Images</span><span class="link-desc">Reverse image search</span></a>
+        <a class="link-item" href="https://yandex.com/images" target="_blank" rel="noopener"><span class="link-favicon">🇷🇺</span><span class="link-name">Yandex Images</span><span class="link-desc">Powerful reverse image search</span></a>
+        <a class="link-item" href="https://pimeyes.com" target="_blank" rel="noopener"><span class="link-favicon">😶</span><span class="link-name">PimEyes</span><span class="link-desc">Face recognition search</span></a>
+        <a class="link-item" href="https://www.bing.com/images" target="_blank" rel="noopener"><span class="link-favicon">🪟</span><span class="link-name">Bing Images</span><span class="link-desc">Reverse image &amp; visual search</span></a>
+        <a class="link-item" href="https://fotoforensics.com" target="_blank" rel="noopener"><span class="link-favicon">🔬</span><span class="link-name">FotoForensics</span><span class="link-desc">Image manipulation detection</span></a>
+        <a class="link-item" href="https://www.exif.tools" target="_blank" rel="noopener"><span class="link-favicon">📷</span><span class="link-name">Exif.tools</span><span class="link-desc">Online EXIF metadata viewer</span></a>
+        <a class="link-item" href="https://citizenevidence.amnestyusa.org" target="_blank" rel="noopener"><span class="link-favicon">📹</span><span class="link-name">YouTube DataViewer</span><span class="link-desc">Video metadata &amp; thumbnails</span></a>
+        <a class="link-item" href="https://29a.ch/photo-forensics" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Photo Forensics</span><span class="link-desc">Error-level analysis tool</span></a>
+        <a class="link-item" href="https://www.invid-project.eu/tools-and-services/invid-verification-plugin/" target="_blank" rel="noopener"><span class="link-favicon">🎬</span><span class="link-name">InVID Plugin</span><span class="link-desc">Video verification browser plugin</span></a>
+      </div>
+    </section>
+
+    <!-- ========== GEOLOCATION / MAPS ========== -->
+    <section class="section-block" id="geo">
+      <div class="section-header">
+        <div class="section-icon ic-green">🗺️</div>
+        <h2>Geolocation &amp; Maps</h2>
+        <span class="badge">10 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://earth.google.com" target="_blank" rel="noopener"><span class="link-favicon">🌍</span><span class="link-name">Google Earth</span><span class="link-desc">Satellite imagery &amp; 3D maps</span></a>
+        <a class="link-item" href="https://www.bing.com/maps" target="_blank" rel="noopener"><span class="link-favicon">🪟</span><span class="link-name">Bing Maps</span><span class="link-desc">Bird's eye view &amp; streetside</span></a>
+        <a class="link-item" href="https://www.wikimapia.org" target="_blank" rel="noopener"><span class="link-favicon">📌</span><span class="link-name">Wikimapia</span><span class="link-desc">Collaborative mapping project</span></a>
+        <a class="link-item" href="https://sentinel-hub.com" target="_blank" rel="noopener"><span class="link-favicon">🛰️</span><span class="link-name">Sentinel Hub</span><span class="link-desc">Satellite EO data browser</span></a>
+        <a class="link-item" href="https://what3words.com" target="_blank" rel="noopener"><span class="link-favicon">3️⃣</span><span class="link-name">What3Words</span><span class="link-desc">3-word GPS coordinate system</span></a>
+        <a class="link-item" href="https://www.openstreetmap.org" target="_blank" rel="noopener"><span class="link-favicon">🗺️</span><span class="link-name">OpenStreetMap</span><span class="link-desc">Open-source world map</span></a>
+        <a class="link-item" href="https://www.geohints.com" target="_blank" rel="noopener"><span class="link-favicon">📍</span><span class="link-name">GeoHints</span><span class="link-desc">GeoGuessr-style geo clues</span></a>
+        <a class="link-item" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="link-favicon">📍</span><span class="link-name">Google Maps Street View</span><span class="link-desc">Street-level imagery</span></a>
+        <a class="link-item" href="https://apps.sentinel-hub.com/sentinel-playground" target="_blank" rel="noopener"><span class="link-favicon">🌿</span><span class="link-name">Sentinel Playground</span><span class="link-desc">Multispectral satellite imagery</span></a>
+        <a class="link-item" href="https://zoom.earth" target="_blank" rel="noopener"><span class="link-favicon">🌦️</span><span class="link-name">Zoom.Earth</span><span class="link-desc">Real-time satellite weather maps</span></a>
+      </div>
+    </section>
+
+    <!-- ========== DARK WEB ========== -->
+    <section class="section-block" id="darkweb">
+      <div class="section-header">
+        <div class="section-icon ic-red">🌑</div>
+        <h2>Dark Web Research</h2>
+        <span class="badge">6 tools</span>
+      </div>
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <span>Dark web research carries legal and safety risks. Always use Tor Browser and take operational security precautions. Only visit .onion sites for legitimate research purposes.</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://ahmia.fi" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Ahmia</span><span class="link-desc">Clearnet Tor hidden services search</span></a>
+        <a class="link-item" href="https://darksearch.io" target="_blank" rel="noopener"><span class="link-favicon">🌑</span><span class="link-name">DarkSearch</span><span class="link-desc">Dark web search engine</span></a>
+        <a class="link-item" href="https://www.torproject.org" target="_blank" rel="noopener"><span class="link-favicon">🧅</span><span class="link-name">Tor Project</span><span class="link-desc">Tor Browser download &amp; info</span></a>
+        <a class="link-item" href="https://hunchly.com" target="_blank" rel="noopener"><span class="link-favicon">📓</span><span class="link-name">Hunchly</span><span class="link-desc">Web capture &amp; dark web tool</span></a>
+        <a class="link-item" href="https://www.onionscan.org" target="_blank" rel="noopener"><span class="link-favicon">🔬</span><span class="link-name">OnionScan</span><span class="link-desc">Hidden service vulnerability scanner</span></a>
+        <a class="link-item" href="https://intelx.io" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">Intelligence X</span><span class="link-desc">Dark web &amp; paste site search</span></a>
+      </div>
+    </section>
+
+    <!-- ========== BUSINESS / CORPORATE ========== -->
+    <section class="section-block" id="business">
+      <div class="section-header">
+        <div class="section-icon ic-yellow">🏢</div>
+        <h2>Business &amp; Corporate</h2>
+        <span class="badge">10 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://opencorporates.com" target="_blank" rel="noopener"><span class="link-favicon">🌐</span><span class="link-name">OpenCorporates</span><span class="link-desc">World's largest open company database</span></a>
+        <a class="link-item" href="https://www.sec.gov/cgi-bin/browse-edgar" target="_blank" rel="noopener"><span class="link-favicon">📜</span><span class="link-name">SEC EDGAR</span><span class="link-desc">US public company filings</span></a>
+        <a class="link-item" href="https://find-and-update.company-information.service.gov.uk" target="_blank" rel="noopener"><span class="link-favicon">🇬🇧</span><span class="link-name">Companies House</span><span class="link-desc">UK company register</span></a>
+        <a class="link-item" href="https://www.glassdoor.com" target="_blank" rel="noopener"><span class="link-favicon">🪟</span><span class="link-name">Glassdoor</span><span class="link-desc">Company reviews &amp; salary data</span></a>
+        <a class="link-item" href="https://www.crunchbase.com" target="_blank" rel="noopener"><span class="link-favicon">📊</span><span class="link-name">Crunchbase</span><span class="link-desc">Startup funding &amp; company info</span></a>
+        <a class="link-item" href="https://www.linkedin.com/company" target="_blank" rel="noopener"><span class="link-favicon">💼</span><span class="link-name">LinkedIn Companies</span><span class="link-desc">Company profiles &amp; employees</span></a>
+        <a class="link-item" href="https://www.dnb.com" target="_blank" rel="noopener"><span class="link-favicon">📋</span><span class="link-name">Dun &amp; Bradstreet</span><span class="link-desc">Business intelligence &amp; credit</span></a>
+        <a class="link-item" href="https://www.bbb.org" target="_blank" rel="noopener"><span class="link-favicon">✅</span><span class="link-name">BBB</span><span class="link-desc">Business ratings &amp; complaints</span></a>
+        <a class="link-item" href="https://www.zoominfo.com" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">ZoomInfo</span><span class="link-desc">B2B contact &amp; company data</span></a>
+        <a class="link-item" href="https://icij.org/investigations/offshore-leaks" target="_blank" rel="noopener"><span class="link-favicon">💰</span><span class="link-name">ICIJ Offshore Leaks</span><span class="link-desc">Panama/Paradise Papers database</span></a>
+      </div>
+    </section>
+
+    <!-- ========== DOCUMENTS & LEAKS ========== -->
+    <section class="section-block" id="documents">
+      <div class="section-header">
+        <div class="section-icon ic-orange">📄</div>
+        <h2>Documents &amp; Data Leaks</h2>
+        <span class="badge">10 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.documentcloud.org" target="_blank" rel="noopener"><span class="link-favicon">📁</span><span class="link-name">DocumentCloud</span><span class="link-desc">Journalist document repository</span></a>
+        <a class="link-item" href="https://pastebin.com" target="_blank" rel="noopener"><span class="link-favicon">📋</span><span class="link-name">Pastebin</span><span class="link-desc">Text &amp; code paste site</span></a>
+        <a class="link-item" href="https://www.scribd.com" target="_blank" rel="noopener"><span class="link-favicon">📚</span><span class="link-name">Scribd</span><span class="link-desc">Documents &amp; book repository</span></a>
+        <a class="link-item" href="https://wikileaks.org" target="_blank" rel="noopener"><span class="link-favicon">🌊</span><span class="link-name">WikiLeaks</span><span class="link-desc">Classified document archive</span></a>
+        <a class="link-item" href="https://intelx.io" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">Intelligence X</span><span class="link-desc">Paste &amp; leak search engine</span></a>
+        <a class="link-item" href="https://www.courtlistener.com" target="_blank" rel="noopener"><span class="link-favicon">⚖️</span><span class="link-name">CourtListener</span><span class="link-desc">US court opinions &amp; records</span></a>
+        <a class="link-item" href="https://www.pacer.gov" target="_blank" rel="noopener"><span class="link-favicon">📜</span><span class="link-name">PACER</span><span class="link-desc">US federal court records</span></a>
+        <a class="link-item" href="https://search.wikileaks.org" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">WikiLeaks Search</span><span class="link-desc">Search WikiLeaks archive</span></a>
+        <a class="link-item" href="https://dehashed.com" target="_blank" rel="noopener"><span class="link-favicon">🗝️</span><span class="link-name">DeHashed</span><span class="link-desc">Data breach search engine</span></a>
+        <a class="link-item" href="https://www.raidforums.com" target="_blank" rel="noopener"><span class="link-favicon">🚨</span><span class="link-name">BreachDirectory</span><span class="link-desc">Breach data lookup</span></a>
+      </div>
+    </section>
+
+    <!-- ========== GOOGLE DORKS ========== -->
+    <section class="section-block" id="dorks">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🔎</div>
+        <h2>Google Dorks — Quick Reference</h2>
+        <span class="badge">Most Used</span>
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>📂 File Type Searches</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">filetype:</span><span class="val">pdf</span>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">filetype:</span><span class="val">xls</span>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">filetype:</span><span class="val">doc</span>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">filetype:</span><span class="val">txt</span></div>
+          </div>
+          <div class="guide-section">
+            <h4>🔑 Sensitive Info</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="flag">intitle:</span><span class="val">"index of"</span> <span class="cmd">passwords</span>
+<span class="flag">inurl:</span><span class="val">admin</span> <span class="cmd">site:</span><span class="val">example.com</span>
+<span class="flag">intext:</span><span class="val">"confidential"</span> <span class="cmd">site:</span><span class="val">example.com</span>
+<span class="flag">ext:</span><span class="val">env</span> <span class="cmd">DB_PASSWORD</span></div>
+          </div>
+          <div class="guide-section">
+            <h4>📧 Email Harvesting</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">intext:</span><span class="val">"@example.com"</span>
+<span class="flag">intitle:</span><span class="val">"staff"</span> <span class="cmd">site:</span><span class="val">example.com</span> email
+<span class="flag">inurl:</span><span class="val">"contact"</span> <span class="cmd">site:</span><span class="val">example.com</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>🗺️ Directory Listing</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="flag">intitle:</span><span class="val">"index of /"</span>
+<span class="flag">intitle:</span><span class="val">"index of"</span> <span class="cmd">inurl:</span><span class="val">ftp</span>
+<span class="flag">intitle:</span><span class="val">"index of"</span> <span class="cmd">mp3</span>
+<span class="flag">intitle:</span><span class="val">"Apache Status"</span></div>
+          </div>
+          <div class="guide-section">
+            <h4>🔧 Login Pages</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="flag">inurl:</span><span class="val">login</span> <span class="cmd">site:</span><span class="val">example.com</span>
+<span class="flag">inurl:</span><span class="val">wp-admin</span> <span class="cmd">site:</span><span class="val">example.com</span>
+<span class="flag">intitle:</span><span class="val">"Login"</span> <span class="cmd">site:</span><span class="val">example.com</span>
+<span class="flag">inurl:</span><span class="val">"admin/login"</span></div>
+          </div>
+          <div class="guide-section">
+            <h4>📸 Camera / IoT</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="flag">intitle:</span><span class="val">"webcam"</span> <span class="cmd">inurl:</span><span class="val">view</span>
+<span class="flag">intitle:</span><span class="val">"Live View"</span>
+<span class="flag">inurl:</span><span class="val">":8080"</span> <span class="flag">intitle:</span><span class="val">"webcam"</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noopener" class="btn btn-outline">📖 Full Google Hacking Database →</a>
+      </div>
+    </section>
+
+    <!-- ========== NEWS & ARCHIVE ========== -->
+    <section class="section-block" id="news">
+      <div class="section-header">
+        <div class="section-icon ic-yellow">📰</div>
+        <h2>News &amp; Archive Research</h2>
+        <span class="badge">8 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://web.archive.org" target="_blank" rel="noopener"><span class="link-favicon">📚</span><span class="link-name">Wayback Machine</span><span class="link-desc">Historical website snapshots</span></a>
+        <a class="link-item" href="https://gdeltproject.org" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">GDELT Project</span><span class="link-desc">Global news event database</span></a>
+        <a class="link-item" href="https://news.google.com" target="_blank" rel="noopener"><span class="link-favicon">🗞️</span><span class="link-name">Google News</span><span class="link-desc">Aggregated news search</span></a>
+        <a class="link-item" href="https://www.newspapers.com" target="_blank" rel="noopener"><span class="link-favicon">📰</span><span class="link-name">Newspapers.com</span><span class="link-desc">Historical newspaper archive</span></a>
+        <a class="link-item" href="https://www.factcheck.org" target="_blank" rel="noopener"><span class="link-favicon">✅</span><span class="link-name">FactCheck.org</span><span class="link-desc">Political fact-checking</span></a>
+        <a class="link-item" href="https://www.snopes.com" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Snopes</span><span class="link-desc">Fact-checking &amp; hoax debunking</span></a>
+        <a class="link-item" href="https://archive.ph" target="_blank" rel="noopener"><span class="link-favicon">💾</span><span class="link-name">Archive.ph</span><span class="link-desc">Save &amp; share web page archives</span></a>
+        <a class="link-item" href="https://cachedview.nl" target="_blank" rel="noopener"><span class="link-favicon">🖥️</span><span class="link-name">CachedView</span><span class="link-desc">View Google cached pages</span></a>
+      </div>
+    </section>
+
+    <!-- ========== THREAT INTEL ========== -->
+    <section class="section-block" id="threat">
+      <div class="section-header">
+        <div class="section-icon ic-red">🛡️</div>
+        <h2>Threat Intelligence</h2>
+        <span class="badge">10 tools</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.virustotal.com" target="_blank" rel="noopener"><span class="link-favicon">🦠</span><span class="link-name">VirusTotal</span><span class="link-desc">Malware &amp; URL analysis</span></a>
+        <a class="link-item" href="https://www.hybrid-analysis.com" target="_blank" rel="noopener"><span class="link-favicon">🔬</span><span class="link-name">Hybrid Analysis</span><span class="link-desc">Free malware sandbox</span></a>
+        <a class="link-item" href="https://any.run" target="_blank" rel="noopener"><span class="link-favicon">▶️</span><span class="link-name">Any.run</span><span class="link-desc">Interactive malware sandbox</span></a>
+        <a class="link-item" href="https://otx.alienvault.com" target="_blank" rel="noopener"><span class="link-favicon">👽</span><span class="link-name">AlienVault OTX</span><span class="link-desc">Open threat intelligence community</span></a>
+        <a class="link-item" href="https://www.threatcrowd.org" target="_blank" rel="noopener"><span class="link-favicon">🕷️</span><span class="link-name">ThreatCrowd</span><span class="link-desc">IP/domain threat search</span></a>
+        <a class="link-item" href="https://viz.greynoise.io" target="_blank" rel="noopener"><span class="link-favicon">💨</span><span class="link-name">GreyNoise</span><span class="link-desc">Internet noise &amp; scanner tracking</span></a>
+        <a class="link-item" href="https://mxtoolbox.com" target="_blank" rel="noopener"><span class="link-favicon">📧</span><span class="link-name">MXToolbox</span><span class="link-desc">Email &amp; DNS diagnostics</span></a>
+        <a class="link-item" href="https://www.threatminer.org" target="_blank" rel="noopener"><span class="link-favicon">⛏️</span><span class="link-name">ThreatMiner</span><span class="link-desc">Data mining for threat intel</span></a>
+        <a class="link-item" href="https://pulsedive.com" target="_blank" rel="noopener"><span class="link-favicon">📊</span><span class="link-name">Pulsedive</span><span class="link-desc">Community threat intelligence</span></a>
+        <a class="link-item" href="https://www.abusech.org" target="_blank" rel="noopener"><span class="link-favicon">🚫</span><span class="link-name">Abuse.ch</span><span class="link-desc">Malware &amp; botnet tracking</span></a>
+      </div>
+    </section>
+
+    <!-- ===== OSINT METHODOLOGY ===== -->
+    <section class="section-block" id="methodology">
+      <div class="section-header">
+        <div class="section-icon ic-blue">📋</div>
+        <h2>OSINT Investigation Methodology</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div><div class="step-title">Define the Objective</div><div class="step-desc">Clearly identify what you are looking for, who the target is, and what the legal authorization for the investigation is. Document your scope.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div><div class="step-title">Passive Reconnaissance</div><div class="step-desc">Gather publicly available data without directly interacting with the target. Use WHOIS, social media, web archives, and search engines.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div><div class="step-title">Active Information Gathering</div><div class="step-desc">Use tools like Shodan, DNS enumeration, and certificate searches. Be mindful that active scanning may leave traces.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div><div class="step-title">Analysis &amp; Correlation</div><div class="step-desc">Correlate gathered data, build a picture of the target using link analysis tools like Maltego. Identify gaps and pivot points.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div><div class="step-title">Verification &amp; Validation</div><div class="step-desc">Cross-check findings across multiple sources. Never rely on a single data point. Use fact-checking and image verification tools.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div><div class="step-title">Documentation &amp; Reporting</div><div class="step-desc">Record all findings with screenshots, timestamps, and source URLs. Use tools like Hunchly or CherryTree for structured note-taking.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NAVIGATION CARDS ===== -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-icon ic-purple">🗂️</div>
+        <h2>Explore More</h2>
+      </div>
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+        <a class="card" href="tools.html">
+          <div class="card-top">
+            <div class="card-icon ic-blue">🔧</div>
+            <div><div class="card-title">Tools Directory</div><div class="card-desc">Detailed profiles of CLI &amp; GUI tools including installation and usage commands for Sherlock, SpiderFoot, theHarvester, Maltego, Recon-ng, and more.</div></div>
+          </div>
+          <span class="card-link">Go to Tools →</span>
+        </a>
+        <a class="card" href="guides.html">
+          <div class="card-top">
+            <div class="card-icon ic-green">📖</div>
+            <div><div class="card-title">OSINT Guides</div><div class="card-desc">Step-by-step investigation guides, Google Dorks, social media OSINT, dark web research, geolocation, and more.</div></div>
+          </div>
+          <span class="card-link">Go to Guides →</span>
+        </a>
+        <a class="card" href="resources.html">
+          <div class="card-top">
+            <div class="card-icon ic-orange">📚</div>
+            <div><div class="card-title">Learning Resources</div><div class="card-desc">Curated courses, books, podcasts, YouTube channels, CTF labs, and OSINT communities to sharpen your skills.</div></div>
+          </div>
+          <span class="card-link">Go to Resources →</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OSINT Hub</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Popular Tools</h4>
+      <ul>
+        <li><a href="https://osintframework.com" target="_blank" rel="noopener">OSINT Framework</a></li>
+        <li><a href="https://www.shodan.io" target="_blank" rel="noopener">Shodan</a></li>
+        <li><a href="https://haveibeenpwned.com" target="_blank" rel="noopener">HaveIBeenPwned</a></li>
+        <li><a href="https://www.maltego.com" target="_blank" rel="noopener">Maltego</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Frameworks</h4>
+      <ul>
+        <li><a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener">Sherlock</a></li>
+        <li><a href="https://github.com/smicallef/spiderfoot" target="_blank" rel="noopener">SpiderFoot</a></li>
+        <li><a href="https://github.com/laramies/theHarvester" target="_blank" rel="noopener">theHarvester</a></li>
+        <li><a href="https://github.com/lanmaster53/recon-ng" target="_blank" rel="noopener">Recon-ng</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal Notice</h4>
+      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6">This portal is for educational purposes only. All OSINT activities must comply with applicable laws and respect individuals' privacy. The maintainers are not responsible for misuse.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 OSINT Hub — Open for everyone, built for investigators.</span>
+    <span>Made with ❤️ for the OSINT community</span>
+  </div>
+</footer>
+
+<button id="back-to-top" title="Back to top">↑</button>
+
+<script src="js/app.js"></script>
 </body>
 </html>
+

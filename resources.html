@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSINT Learning Resources — OSINT Hub</title>
+  <meta name="description" content="Curated OSINT learning resources — courses, books, YouTube channels, podcasts, CTF labs, communities and frameworks.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="reading-progress"></div>
+<div class="top-bar">⚠️ For educational and lawful research purposes only. Always respect privacy laws and platform TOS.</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      OSINT Hub
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <div class="nav-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" placeholder="Search resources…" autocomplete="off">
+    </div>
+  </div>
+</nav>
+
+<div id="search-results"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>📚 Learning <span>Resources</span></h1>
+    <p>Curated courses, books, videos, communities, and practice labs to sharpen your OSINT skills — from beginner to expert.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <!-- ===== FRAMEWORKS ===== -->
+    <section class="section-block" id="frameworks">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🌐</div>
+        <h2>OSINT Frameworks &amp; Portals</h2>
+      </div>
+      <div class="cards-grid">
+
+        <a class="card" href="https://osintframework.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-green">🌐</div>
+            <div><div class="card-title">OSINT Framework</div><div class="card-desc">The definitive interactive mind-map of OSINT tools, organized by investigation type and target data.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+          <span class="card-link">Visit osintframework.com →</span>
+        </a>
+
+        <a class="card" href="https://start.me/p/1kJKR9/commandergirl-s-suggestions" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-purple">⭐</div>
+            <div><div class="card-title">CommanderGirl's OSINT List</div><div class="card-desc">A highly-curated start.me page of OSINT tools, links and resources from a trusted investigator.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+          <span class="card-link">Visit start.me →</span>
+        </a>
+
+        <a class="card" href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-blue">📋</div>
+            <div><div class="card-title">Nixintel's OSINT Resource List</div><div class="card-desc">Comprehensive OSINT resource collection maintained by investigative journalist Nixintel.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+          <span class="card-link">Visit start.me →</span>
+        </a>
+
+        <a class="card" href="https://i-intelligence.eu/uploads/public-documents/OSINT_Handbook_2020.pdf" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-orange">📖</div>
+            <div><div class="card-title">OSINT Handbook 2020</div><div class="card-desc">Comprehensive PDF handbook on OSINT methodology, tools, and best practices by I-Intelligence.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">Download PDF →</span>
+        </a>
+
+        <a class="card" href="https://inteltechniques.com/links.html" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-teal">🔗</div>
+            <div><div class="card-title">IntelTechniques Links</div><div class="card-desc">Michael Bazzell's curated OSINT search tools — the gold standard for investigators.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span><span class="tag web">Web</span></div>
+          <span class="card-link">Visit inteltechniques.com →</span>
+        </a>
+
+        <a class="card" href="https://github.com/jivoi/awesome-osint" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-yellow">⭐</div>
+            <div><div class="card-title">Awesome OSINT (GitHub)</div><div class="card-desc">Massive community-maintained list of OSINT tools, resources, and techniques on GitHub.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">View on GitHub →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ===== COURSES ===== -->
+    <section class="section-block" id="courses">
+      <div class="section-header">
+        <div class="section-icon ic-green">🎓</div>
+        <h2>Courses &amp; Training</h2>
+      </div>
+      <div style="overflow-x:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)">
+        <table class="res-table">
+          <thead>
+            <tr><th>Course</th><th>Provider</th><th>Level</th><th>Cost</th><th>Link</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Open Source Intelligence (OSINT) Fundamentals</strong></td>
+              <td>TCM Security</td>
+              <td>Beginner</td>
+              <td><span class="tag paid">Paid</span></td>
+              <td><a href="https://academy.tcm-sec.com/p/osint-fundamentals" target="_blank" rel="noopener">TCM Academy</a></td>
+            </tr>
+            <tr>
+              <td><strong>IntelTechniques OSINT Training</strong></td>
+              <td>Michael Bazzell</td>
+              <td>Intermediate</td>
+              <td><span class="tag paid">Paid</span></td>
+              <td><a href="https://inteltechniques.com/courses.html" target="_blank" rel="noopener">IntelTechniques</a></td>
+            </tr>
+            <tr>
+              <td><strong>SANS FOR578 — Cyber Threat Intelligence</strong></td>
+              <td>SANS Institute</td>
+              <td>Advanced</td>
+              <td><span class="tag paid">Paid</span></td>
+              <td><a href="https://www.sans.org/courses/cyber-threat-intelligence/" target="_blank" rel="noopener">SANS</a></td>
+            </tr>
+            <tr>
+              <td><strong>Trace Labs OSINT Training</strong></td>
+              <td>Trace Labs</td>
+              <td>Beginner–Intermediate</td>
+              <td><span class="tag free">Free</span></td>
+              <td><a href="https://www.tracelabs.org" target="_blank" rel="noopener">Trace Labs</a></td>
+            </tr>
+            <tr>
+              <td><strong>OSINT Combine Free Courses</strong></td>
+              <td>OSINT Combine</td>
+              <td>Beginner</td>
+              <td><span class="tag free">Free</span></td>
+              <td><a href="https://www.osintcombine.com/training" target="_blank" rel="noopener">OSINT Combine</a></td>
+            </tr>
+            <tr>
+              <td><strong>Bellingcat Online Investigation Workshop</strong></td>
+              <td>Bellingcat</td>
+              <td>Beginner–Intermediate</td>
+              <td><span class="tag free">Free</span></td>
+              <td><a href="https://www.bellingcat.com/resources/how-tos/" target="_blank" rel="noopener">Bellingcat</a></td>
+            </tr>
+            <tr>
+              <td><strong>First Draft Verification Handbook</strong></td>
+              <td>First Draft News</td>
+              <td>Beginner</td>
+              <td><span class="tag free">Free</span></td>
+              <td><a href="https://firstdraftnews.org/long_reads/verification-handbook/" target="_blank" rel="noopener">First Draft</a></td>
+            </tr>
+            <tr>
+              <td><strong>Cybrary OSINT Courses</strong></td>
+              <td>Cybrary</td>
+              <td>All levels</td>
+              <td><span class="tag freemium">Freemium</span></td>
+              <td><a href="https://www.cybrary.it" target="_blank" rel="noopener">Cybrary</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== BOOKS ===== -->
+    <section class="section-block" id="books">
+      <div class="section-header">
+        <div class="section-icon ic-orange">📕</div>
+        <h2>Essential Books</h2>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon ic-blue">📕</div>
+            <div><div class="card-title">Open Source Intelligence Techniques</div><div class="card-desc">Michael Bazzell's bible for OSINT investigators. Covers tools, methodology, and practical workflows. Updated yearly.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag paid">Paid</span></div>
+          <a class="card-link" href="https://inteltechniques.com/book1.html" target="_blank" rel="noopener">Get the book →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon ic-red">📘</div>
+            <div><div class="card-title">Extreme Privacy</div><div class="card-desc">Michael Bazzell's guide to removing your digital footprint and protecting personal information from OSINT.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag paid">Paid</span></div>
+          <a class="card-link" href="https://inteltechniques.com/book7.html" target="_blank" rel="noopener">Get the book →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon ic-green">📗</div>
+            <div><div class="card-title">The Art of Invisibility</div><div class="card-desc">Kevin Mitnick's guide to digital privacy and protecting yourself from surveillance in the modern world.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag paid">Paid</span></div>
+          <a class="card-link" href="https://www.amazon.com/Art-Invisibility-Worlds-Teaches-Brother/dp/031638636X" target="_blank" rel="noopener">Amazon →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon ic-purple">📙</div>
+            <div><div class="card-title">Social Engineering: The Science of Human Hacking</div><div class="card-desc">Christopher Hadnagy's definitive guide on human-based intelligence gathering and social engineering.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag paid">Paid</span></div>
+          <a class="card-link" href="https://www.wiley.com/en-us/Social+Engineering%3A+The+Science+of+Human+Hacking%2C+2nd+Edition-p-9781119433385" target="_blank" rel="noopener">Wiley →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon ic-yellow">📒</div>
+            <div><div class="card-title">Hunting Cyber Criminals</div><div class="card-desc">Vinny Troia's book on tracking cybercriminals using open source intelligence techniques.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag paid">Paid</span></div>
+          <a class="card-link" href="https://www.wiley.com/en-us/Hunting+Cyber+Criminals%3A+A+Hacker%27s+Guide+to+Online+Intelligence+Gathering+Tools+and+Techniques-p-9781119540922" target="_blank" rel="noopener">Wiley →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon ic-teal">📓</div>
+            <div><div class="card-title">The OSINT Handbook</div><div class="card-desc">By I-Intelligence — a practical 140-page guide covering the OSINT cycle from tasking to reporting.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free PDF</span></div>
+          <a class="card-link" href="https://i-intelligence.eu/uploads/public-documents/OSINT_Handbook_2020.pdf" target="_blank" rel="noopener">Download PDF →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== YOUTUBE ===== -->
+    <section class="section-block" id="youtube">
+      <div class="section-header">
+        <div class="section-icon ic-red">▶️</div>
+        <h2>YouTube Channels &amp; Videos</h2>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.youtube.com/@IntelTechniques" target="_blank" rel="noopener"><span class="link-favicon">🎥</span><span class="link-name">IntelTechniques</span><span class="link-desc">Michael Bazzell's OSINT video tutorials</span></a>
+        <a class="link-item" href="https://www.youtube.com/@TCMSecurityAcademy" target="_blank" rel="noopener"><span class="link-favicon">🎥</span><span class="link-name">TCM Security</span><span class="link-desc">OSINT fundamentals course content</span></a>
+        <a class="link-item" href="https://www.youtube.com/@NullByteWHT" target="_blank" rel="noopener"><span class="link-favicon">🎥</span><span class="link-name">Null Byte</span><span class="link-desc">Hacking, OSINT &amp; security tutorials</span></a>
+        <a class="link-item" href="https://www.youtube.com/@OSINTDojo" target="_blank" rel="noopener"><span class="link-favicon">🎥</span><span class="link-name">OSINT Dojo</span><span class="link-desc">OSINT tutorials and challenge walkthroughs</span></a>
+        <a class="link-item" href="https://www.youtube.com/@TraceLabs" target="_blank" rel="noopener"><span class="link-favicon">🎥</span><span class="link-name">Trace Labs</span><span class="link-desc">OSINT for missing persons CTF team</span></a>
+        <a class="link-item" href="https://www.youtube.com/@HackerSploit" target="_blank" rel="noopener"><span class="link-favicon">🎥</span><span class="link-name">HackerSploit</span><span class="link-desc">Linux security &amp; OSINT tools</span></a>
+        <a class="link-item" href="https://www.youtube.com/@bellingcat" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Bellingcat</span><span class="link-desc">Investigative journalism &amp; OSINT</span></a>
+        <a class="link-item" href="https://www.youtube.com/@DarknetDiaries" target="_blank" rel="noopener"><span class="link-favicon">🎧</span><span class="link-name">Darknet Diaries</span><span class="link-desc">True cyber crime &amp; intelligence stories</span></a>
+      </div>
+    </section>
+
+    <!-- ===== PODCASTS ===== -->
+    <section class="section-block" id="podcasts">
+      <div class="section-header">
+        <div class="section-icon ic-purple">🎧</div>
+        <h2>Podcasts</h2>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://inteltechniques.com/podcast.html" target="_blank" rel="noopener"><span class="link-favicon">🎙️</span><span class="link-name">Privacy, Security &amp; OSINT Show</span><span class="link-desc">Michael Bazzell's weekly podcast</span></a>
+        <a class="link-item" href="https://darknetdiaries.com" target="_blank" rel="noopener"><span class="link-favicon">🎙️</span><span class="link-name">Darknet Diaries</span><span class="link-desc">True stories from the dark side of the internet</span></a>
+        <a class="link-item" href="https://risky.biz" target="_blank" rel="noopener"><span class="link-favicon">🎙️</span><span class="link-name">Risky Business</span><span class="link-desc">Information security news &amp; interviews</span></a>
+        <a class="link-item" href="https://osintpodcast.com" target="_blank" rel="noopener"><span class="link-favicon">🎙️</span><span class="link-name">OSINT Podcast</span><span class="link-desc">Weekly OSINT news and discussions</span></a>
+        <a class="link-item" href="https://tradecraftintelligence.com" target="_blank" rel="noopener"><span class="link-favicon">🎙️</span><span class="link-name">The Tradecraft Intelligence Podcast</span><span class="link-desc">Intelligence tradecraft &amp; OSINT techniques</span></a>
+        <a class="link-item" href="https://www.smashingsecurity.com" target="_blank" rel="noopener"><span class="link-favicon">🎙️</span><span class="link-name">Smashing Security</span><span class="link-desc">Cybersecurity news &amp; privacy</span></a>
+      </div>
+    </section>
+
+    <!-- ===== CTF ===== -->
+    <section class="section-block" id="ctf">
+      <div class="section-header">
+        <div class="section-icon ic-yellow">🏆</div>
+        <h2>CTF Challenges &amp; Practice Labs</h2>
+      </div>
+      <div class="cards-grid">
+
+        <a class="card" href="https://www.tracelabs.org/initiatives/search-party" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-blue">🔍</div>
+            <div><div class="card-title">Trace Labs Search Party CTF</div><div class="card-desc">OSINT CTF competitions using real missing persons cases. Develop skills while helping others.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">Join Trace Labs →</span>
+        </a>
+
+        <a class="card" href="https://osintdojo.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-green">🥋</div>
+            <div><div class="card-title">OSINT Dojo</div><div class="card-desc">Progressive OSINT challenges designed to teach new techniques step by step.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">Start training →</span>
+        </a>
+
+        <a class="card" href="https://www.hackinvestigator.com" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-orange">🕵️</div>
+            <div><div class="card-title">Hack Investigator</div><div class="card-desc">OSINT practice challenges with walkthrough guides for beginners.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">Practice →</span>
+        </a>
+
+        <a class="card" href="https://tryhackme.com/paths" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-red">💻</div>
+            <div><div class="card-title">TryHackMe OSINT Path</div><div class="card-desc">Guided learning path covering OSINT fundamentals with hands-on labs in browser.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag freemium">Freemium</span></div>
+          <span class="card-link">Start learning →</span>
+        </a>
+
+        <a class="card" href="https://ctftime.org" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-purple">🏅</div>
+            <div><div class="card-title">CTFtime</div><div class="card-desc">Global CTF competition calendar. Many events include OSINT challenge categories.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">Find competitions →</span>
+        </a>
+
+        <a class="card" href="https://github.com/OhShINT/ohshint.gitbook.io" target="_blank" rel="noopener">
+          <div class="card-top">
+            <div class="card-icon ic-teal">📚</div>
+            <div><div class="card-title">OhShINT GitBook</div><div class="card-desc">Free OSINT challenge writeups and learning resources compiled by the community.</div></div>
+          </div>
+          <div class="card-tags"><span class="tag free">Free</span></div>
+          <span class="card-link">View resources →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ===== COMMUNITIES ===== -->
+    <section class="section-block" id="communities">
+      <div class="section-header">
+        <div class="section-icon ic-pink">👥</div>
+        <h2>Communities &amp; Forums</h2>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://discord.com/invite/tracelab" target="_blank" rel="noopener"><span class="link-favicon">💬</span><span class="link-name">Trace Labs Discord</span><span class="link-desc">OSINT community for missing persons work</span></a>
+        <a class="link-item" href="https://discord.gg/osintdojo" target="_blank" rel="noopener"><span class="link-favicon">💬</span><span class="link-name">OSINT Dojo Discord</span><span class="link-desc">Challenges, discussion &amp; help</span></a>
+        <a class="link-item" href="https://www.reddit.com/r/OSINT/" target="_blank" rel="noopener"><span class="link-favicon">🤖</span><span class="link-name">r/OSINT</span><span class="link-desc">OSINT subreddit community</span></a>
+        <a class="link-item" href="https://www.reddit.com/r/investigativeosint/" target="_blank" rel="noopener"><span class="link-favicon">🤖</span><span class="link-name">r/investigativeosint</span><span class="link-desc">Investigative OSINT techniques</span></a>
+        <a class="link-item" href="https://twitter.com/hashtag/OSINT" target="_blank" rel="noopener"><span class="link-favicon">🐦</span><span class="link-name">#OSINT on X/Twitter</span><span class="link-desc">Community hashtag for OSINT tips</span></a>
+        <a class="link-item" href="https://www.linkedin.com/groups/OSINT" target="_blank" rel="noopener"><span class="link-favicon">💼</span><span class="link-name">OSINT LinkedIn Groups</span><span class="link-desc">Professional OSINT networking</span></a>
+        <a class="link-item" href="https://www.bellingcat.com/community/" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Bellingcat Community</span><span class="link-desc">Investigative journalism &amp; OSINT</span></a>
+        <a class="link-item" href="https://twitter.com/osintcurio_us" target="_blank" rel="noopener"><span class="link-favicon">🐦</span><span class="link-name">@osintcurio_us</span><span class="link-desc">Daily OSINT news &amp; tools on Twitter</span></a>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section-block" id="certifications">
+      <div class="section-header">
+        <div class="section-icon ic-green">🏅</div>
+        <h2>Certifications</h2>
+      </div>
+      <div style="overflow-x:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)">
+        <table class="res-table">
+          <thead>
+            <tr><th>Certification</th><th>Issuer</th><th>Focus</th><th>Cost</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GOSI — GIAC Open Source Intelligence</strong></td>
+              <td>GIAC / SANS</td>
+              <td>OSINT methodology, tools, and techniques</td>
+              <td><span class="tag paid">~$949</span></td>
+            </tr>
+            <tr>
+              <td><strong>GCTI — GIAC Cyber Threat Intelligence</strong></td>
+              <td>GIAC / SANS</td>
+              <td>Threat intelligence lifecycle</td>
+              <td><span class="tag paid">~$949</span></td>
+            </tr>
+            <tr>
+              <td><strong>CISA — Certified Intelligence &amp; Security Analyst</strong></td>
+              <td>ISACA</td>
+              <td>Broad intelligence &amp; security analytics</td>
+              <td><span class="tag paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td><strong>eJPT — eLearnSecurity Junior Penetration Tester</strong></td>
+              <td>INE / eLearnSecurity</td>
+              <td>Includes recon &amp; OSINT components</td>
+              <td><span class="tag paid">~$200</span></td>
+            </tr>
+            <tr>
+              <td><strong>Maltego Certified Analyst</strong></td>
+              <td>Maltego</td>
+              <td>Maltego platform proficiency</td>
+              <td><span class="tag paid">Paid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== KEY PEOPLE ===== -->
+    <section class="section-block" id="people">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🧑‍💻</div>
+        <h2>Notable OSINT Experts &amp; Researchers</h2>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://twitter.com/inteltechniques" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">Michael Bazzell</span><span class="link-desc">Author of OSINT Techniques, Privacy &amp; Security Podcast</span></a>
+        <a class="link-item" href="https://twitter.com/dutch_osinter" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">Sector035</span><span class="link-desc">Week in OSINT author, researcher</span></a>
+        <a class="link-item" href="https://twitter.com/nixintel" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">Nixintel</span><span class="link-desc">Investigative journalist &amp; OSINT trainer</span></a>
+        <a class="link-item" href="https://twitter.com/bellingcat" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">Bellingcat</span><span class="link-desc">Open-source investigation organization</span></a>
+        <a class="link-item" href="https://twitter.com/RamirezAmir_" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">Amir Ramirez</span><span class="link-desc">OSINT trainer &amp; practitioner</span></a>
+        <a class="link-item" href="https://twitter.com/sinwindie" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">Sinwindie</span><span class="link-desc">Maltego expert &amp; OSINT developer</span></a>
+        <a class="link-item" href="https://twitter.com/osintcurio_us" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">@osintcurio_us</span><span class="link-desc">OSINT news &amp; tips aggregator</span></a>
+        <a class="link-item" href="https://twitter.com/G0duk" target="_blank" rel="noopener"><span class="link-favicon">👤</span><span class="link-name">G0duk</span><span class="link-desc">Dark web OSINT researcher</span></a>
+      </div>
+    </section>
+
+    <!-- ===== BLOGS ===== -->
+    <section class="section-block" id="blogs">
+      <div class="section-header">
+        <div class="section-icon ic-orange">✍️</div>
+        <h2>Blogs &amp; Newsletters</h2>
+      </div>
+      <div class="links-grid">
+        <a class="link-item" href="https://www.bellingcat.com" target="_blank" rel="noopener"><span class="link-favicon">🌐</span><span class="link-name">Bellingcat</span><span class="link-desc">Investigative journalism &amp; OSINT how-tos</span></a>
+        <a class="link-item" href="https://www.sector035.nl" target="_blank" rel="noopener"><span class="link-favicon">📰</span><span class="link-name">Week in OSINT</span><span class="link-desc">Weekly OSINT news digest by Sector035</span></a>
+        <a class="link-item" href="https://inteltechniques.com/blog/" target="_blank" rel="noopener"><span class="link-favicon">📝</span><span class="link-name">IntelTechniques Blog</span><span class="link-desc">Michael Bazzell's OSINT updates</span></a>
+        <a class="link-item" href="https://nixintel.info" target="_blank" rel="noopener"><span class="link-favicon">🔍</span><span class="link-name">Nixintel Blog</span><span class="link-desc">Deep OSINT technique articles</span></a>
+        <a class="link-item" href="https://www.osintcombine.com/blog" target="_blank" rel="noopener"><span class="link-favicon">🔗</span><span class="link-name">OSINT Combine Blog</span><span class="link-desc">Tool tutorials and OSINT workflows</span></a>
+        <a class="link-item" href="https://keyfindings.blog" target="_blank" rel="noopener"><span class="link-favicon">🗝️</span><span class="link-name">Key Findings Blog</span><span class="link-desc">Practical OSINT technique breakdowns</span></a>
+        <a class="link-item" href="https://securitytrails.com/blog" target="_blank" rel="noopener"><span class="link-favicon">🔐</span><span class="link-name">SecurityTrails Blog</span><span class="link-desc">DNS &amp; domain OSINT guides</span></a>
+        <a class="link-item" href="https://osintcurio.us" target="_blank" rel="noopener"><span class="link-favicon">📡</span><span class="link-name">OSINT Curious</span><span class="link-desc">OSINT webcast &amp; blog</span></a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OSINT Hub</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#frameworks">Frameworks</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#ctf">CTF Labs</a></li>
+        <li><a href="#communities">Communities</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#podcasts">Podcasts</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal Notice</h4>
+      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6">Resource links are provided for educational purposes. The OSINT Hub does not endorse any specific product, service, or individual. Always verify the quality and legality of third-party resources.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 OSINT Hub</span>
+    <span>Made with ❤️ for the OSINT community</span>
+  </div>
+</footer>
+
+<button id="back-to-top" title="Back to top">↑</button>
+<script src="js/app.js"></script>
+</body>
+</html>
