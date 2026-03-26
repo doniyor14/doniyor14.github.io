@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSINT Guides — OSINT Hub</title>
+  <meta name="description" content="In-depth OSINT investigation guides — social media, Google Dorks, geolocation, dark web research, image analysis, and operational security.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="reading-progress"></div>
+<div class="top-bar">⚠️ For educational and lawful research purposes only. Always respect privacy laws and platform TOS.</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      OSINT Hub
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <div class="nav-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" placeholder="Search guides…" autocomplete="off">
+    </div>
+  </div>
+</nav>
+
+<div id="search-results"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>📖 OSINT <span>Investigation Guides</span></h1>
+    <p>Practical, step-by-step guides for every stage of an OSINT investigation — from beginner fundamentals to advanced techniques.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <!-- ===== METHODOLOGY ===== -->
+    <section class="section-block" id="methodology">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🧭</div>
+        <h2>OSINT Investigation Methodology</h2>
+      </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">ℹ️</span>
+        <span>Every investigation should follow a repeatable process. This methodology is based on industry best practices used by professional investigators.</span>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>📋 Phase 1 — Planning</h4>
+            <ul class="checklist">
+              <li>Define the investigation objective clearly</li>
+              <li>Identify the target: person, company, domain, IP, username</li>
+              <li>Establish legal authorization and scope</li>
+              <li>Document starting information (seed data)</li>
+              <li>Set up a clean, isolated investigation environment</li>
+              <li>Create a case management structure</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🔍 Phase 2 — Passive Recon</h4>
+            <ul class="checklist">
+              <li>Google/Bing advanced search (dorks)</li>
+              <li>Social media profile enumeration</li>
+              <li>WHOIS &amp; DNS record lookups</li>
+              <li>Certificate transparency logs (crt.sh)</li>
+              <li>Wayback Machine / archive.ph</li>
+              <li>Paste site searches (Pastebin, IntelX)</li>
+              <li>Data breach checks (HIBP, Dehashed)</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📡 Phase 3 — Active Recon</h4>
+            <ul class="checklist">
+              <li>SpiderFoot automated scanning</li>
+              <li>Shodan / Censys device searches</li>
+              <li>Subdomain enumeration (Amass, Subfinder)</li>
+              <li>DNS brute-forcing</li>
+              <li>Email harvesting (theHarvester)</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>🔗 Phase 4 — Analysis</h4>
+            <ul class="checklist">
+              <li>Build a link diagram (Maltego, CaseFile)</li>
+              <li>Cross-correlate usernames, emails, handles</li>
+              <li>Timeline analysis of posts &amp; activity</li>
+              <li>Geolocation of photos/videos</li>
+              <li>Network mapping (ASN, IP ranges)</li>
+              <li>Identify aliases &amp; alternate accounts</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>✅ Phase 5 — Verification</h4>
+            <ul class="checklist">
+              <li>Cross-check every finding against 2+ sources</li>
+              <li>Reverse image search profile photos</li>
+              <li>Confirm geo-matches with satellite imagery</li>
+              <li>Validate emails with verification tools</li>
+              <li>Check for date manipulation in images</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📝 Phase 6 — Documentation</h4>
+            <ul class="checklist">
+              <li>Take timestamped screenshots (Hunchly)</li>
+              <li>Archive URLs with archive.ph</li>
+              <li>Maintain a chain of custody log</li>
+              <li>Write findings in clear, factual language</li>
+              <li>Generate structured HTML/PDF report</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOCIAL MEDIA ===== -->
+    <section class="section-block" id="social">
+      <div class="section-header">
+        <div class="section-icon ic-purple">📱</div>
+        <h2>Social Media OSINT Guide</h2>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>🐦 Twitter / X Investigation</h4>
+            <ul class="checklist">
+              <li>Use Advanced Search: <code style="color:var(--accent)">from:username since:2024-01-01</code></li>
+              <li>Search near a location: <code style="color:var(--accent)">near:"city" within:5km</code></li>
+              <li>Find deleted tweets with Wayback Machine</li>
+              <li>Use <a href="https://tweetdeck.twitter.com" target="_blank" rel="noopener">TweetDeck</a> for real-time monitoring</li>
+              <li>Extract followers with <a href="https://botometer.osome.iu.edu" target="_blank" rel="noopener">Botometer</a> for bot detection</li>
+              <li>OSINT.rocks Twitter search for advanced queries</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📸 Instagram Investigation</h4>
+            <ul class="checklist">
+              <li>Use <a href="https://www.aware-online.com/en/osint-tools/instagram-search-tool/" target="_blank" rel="noopener">AwareOnline IG search</a></li>
+              <li>Check tagged locations in the map view</li>
+              <li>Reverse image search profile photos (Yandex)</li>
+              <li>Use Picodash to search by hashtag &amp; location</li>
+              <li>Check Stories via <a href="https://storiesig.app" target="_blank" rel="noopener">StoriesIG</a></li>
+              <li>Extract EXIF from posted images when available</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>💼 LinkedIn Investigation</h4>
+            <ul class="checklist">
+              <li>Use Google: <code style="color:var(--accent)">site:linkedin.com/in "name"</code></li>
+              <li>IntelX for LinkedIn data</li>
+              <li>CrossLinked for username enumeration</li>
+              <li>Wayback Machine for deleted profiles</li>
+              <li>Note former employers for pivot points</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>🤖 Reddit Investigation</h4>
+            <ul class="checklist">
+              <li>Advanced search: <code style="color:var(--accent)">author:username subreddit:sub</code></li>
+              <li>Use <a href="https://www.reddit.com/user/username/overview" target="_blank" rel="noopener">reddit.com/user/username/overview</a></li>
+              <li>RedditMetis for account statistics</li>
+              <li>Pushshift for deleted content (limited availability)</li>
+              <li>Map posting patterns to identify timezone</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>✈️ Telegram Investigation</h4>
+            <ul class="checklist">
+              <li>Search with <a href="https://tgstat.com" target="_blank" rel="noopener">TGStat</a> or <a href="https://telemetr.io" target="_blank" rel="noopener">Telemetr</a></li>
+              <li>Use <code style="color:var(--accent)">@username</code> search in Telegram</li>
+              <li>IntelX indexes Telegram messages</li>
+              <li>Check for associated bots by username</li>
+              <li>Monitor channels with Telegram Bot API</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🐙 GitHub OSINT</h4>
+            <ul class="checklist">
+              <li>GitHub Advanced Search: <code style="color:var(--accent)">author:username extension:env</code></li>
+              <li>GitDorker for sensitive data exposure</li>
+              <li>Search commit emails: <code style="color:var(--accent)">git log --format="%ae"</code></li>
+              <li>TruffleHog for credential scanning</li>
+              <li>GitHub Archive for historical data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOOGLE DORKS ===== -->
+    <section class="section-block" id="dorks">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🔎</div>
+        <h2>Google Dorking — Complete Guide</h2>
+      </div>
+
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <span>Google Dorks are powerful search operators. Never use them to access systems or data without authorization. This guide is for investigative and defensive security purposes only.</span>
+      </div>
+
+      <div style="overflow-x:auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1.5rem">
+        <table class="res-table">
+          <thead>
+            <tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code style="color:var(--accent)">site:</code></td><td>Restrict results to a domain</td><td><code>site:example.com filetype:pdf</code></td></tr>
+            <tr><td><code style="color:var(--accent)">intitle:</code></td><td>Search in page title</td><td><code>intitle:"index of" passwords</code></td></tr>
+            <tr><td><code style="color:var(--accent)">inurl:</code></td><td>Search in page URL</td><td><code>inurl:admin site:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">intext:</code></td><td>Search in page body text</td><td><code>intext:"api_key" site:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">filetype:</code></td><td>Filter by file extension</td><td><code>filetype:sql site:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">ext:</code></td><td>Alias for filetype:</td><td><code>ext:env "DB_PASSWORD"</code></td></tr>
+            <tr><td><code style="color:var(--accent)">cache:</code></td><td>View cached version of page</td><td><code>cache:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">link:</code></td><td>Find pages linking to URL</td><td><code>link:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">related:</code></td><td>Find similar sites</td><td><code>related:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">info:</code></td><td>Google summary of a URL</td><td><code>info:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">numrange:</code></td><td>Number range search</td><td><code>numrange:1000-2000</code></td></tr>
+            <tr><td><code style="color:var(--accent)">before:/after:</code></td><td>Filter by date</td><td><code>site:example.com after:2023-01-01</code></td></tr>
+            <tr><td><code style="color:var(--accent)">-</code></td><td>Exclude a keyword</td><td><code>example.com -site:example.com</code></td></tr>
+            <tr><td><code style="color:var(--accent)">"quotes"</code></td><td>Exact phrase match</td><td><code>"John Smith" "New York"</code></td></tr>
+            <tr><td><code style="color:var(--accent)">OR / |</code></td><td>Either term</td><td><code>site:gov OR site:mil filetype:pdf</code></td></tr>
+            <tr><td><code style="color:var(--accent)">*</code></td><td>Wildcard</td><td><code>"password is *"</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="guide-section">
+        <h4>🧰 Useful Dork Combinations</h4>
+        <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="comment"># Find exposed config files</span>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">ext:env</span> <span class="val">OR</span> <span class="flag">ext:cfg</span> <span class="val">OR</span> <span class="flag">ext:conf</span>
+
+<span class="comment"># Search company employees on LinkedIn</span>
+<span class="cmd">site:</span><span class="val">linkedin.com/in</span> <span class="flag">intitle:</span><span class="val">"Example Corp"</span>
+
+<span class="comment"># Find exposed Elasticsearch / Kibana</span>
+<span class="cmd">intitle:</span><span class="val">"kibana"</span> <span class="flag">inurl:</span><span class="val">":5601"</span>
+
+<span class="comment"># Public Trello boards with sensitive data</span>
+<span class="cmd">site:</span><span class="val">trello.com</span> <span class="flag">intext:</span><span class="val">"password"</span>
+
+<span class="comment"># Find email lists</span>
+<span class="cmd">site:</span><span class="val">example.com</span> <span class="flag">filetype:</span><span class="val">xls</span> <span class="flag">intext:</span><span class="val">"email"</span>
+
+<span class="comment"># VPN/RDP portals</span>
+<span class="cmd">intitle:</span><span class="val">"Citrix Gateway"</span> <span class="flag">site:</span><span class="val">example.com</span></div>
+      </div>
+      <div class="mt-2">
+        <a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noopener" class="btn btn-outline">📖 Google Hacking Database →</a>
+        <a href="https://pentest-tools.com/information-gathering/google-hacking" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left:0.5rem">🔧 Dork Generator →</a>
+      </div>
+    </section>
+
+    <!-- ===== IMAGE / GEO ===== -->
+    <section class="section-block" id="images">
+      <div class="section-header">
+        <div class="section-icon ic-pink">🖼️</div>
+        <h2>Image Analysis &amp; Geolocation (GEOINT)</h2>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>🔍 Reverse Image Search Workflow</h4>
+            <ul class="checklist">
+              <li>Start with <strong>Google Images</strong> for broad coverage</li>
+              <li>Use <strong>Yandex Images</strong> for best face recognition</li>
+              <li>Run through <strong>TinEye</strong> for exact duplicates</li>
+              <li>Try <strong>PimEyes</strong> for face-only searches</li>
+              <li>Check Bing Images for different index</li>
+              <li>Always try the image URL and upload separately</li>
+              <li>Crop faces/objects and search them individually</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📷 EXIF Metadata Extraction</h4>
+            <ul class="checklist">
+              <li>Run ExifTool on any downloaded image</li>
+              <li>Look for GPS coordinates (lat/long/altitude)</li>
+              <li>Check device make/model for profiling</li>
+              <li>Note date/time — adjust for timezone</li>
+              <li>Software tag reveals editing history</li>
+              <li>Note: Social media usually strips EXIF</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>🗺️ Geolocation from Images</h4>
+            <ul class="checklist">
+              <li>Identify landmarks, signs, vegetation, terrain</li>
+              <li>Read text in images (language/script narrows region)</li>
+              <li>Vehicle license plates suggest country/state</li>
+              <li>Electrical utility poles differ by region</li>
+              <li>Shadow angle can determine hemisphere + approximate time</li>
+              <li>Match to Street View with Google/Bing</li>
+              <li>Use <a href="https://sunpos.org" target="_blank" rel="noopener">Sun position tools</a> for timing validation</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🎬 Video Verification</h4>
+            <ul class="checklist">
+              <li>Extract frames with FFmpeg: <code style="color:var(--accent)">ffmpeg -i video.mp4 -r 1/1 frame%04d.jpg</code></li>
+              <li>Check upload date vs event date</li>
+              <li>Use InVID Plugin for YouTube verification</li>
+              <li>Cross-reference audio/weather/daylight</li>
+              <li>Check YouTube DataViewer for upload thumbnails</li>
+              <li>Wikimapia &amp; Google Earth for location confirmation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DARK WEB GUIDE ===== -->
+    <section class="section-block" id="darkweb">
+      <div class="section-header">
+        <div class="section-icon ic-red">🌑</div>
+        <h2>Dark Web OSINT — Safe Research Guide</h2>
+      </div>
+
+      <div class="alert alert-danger">
+        <span class="alert-icon">🚨</span>
+        <span><strong>Warning:</strong> Dark web research involves significant legal and safety risks. Always operate within legal boundaries, use proper OPSEC, and never download files from unknown sources.</span>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>🛡️ OPSEC Setup</h4>
+            <ul class="checklist">
+              <li>Use a dedicated physical or virtual machine</li>
+              <li>Download <a href="https://www.torproject.org" target="_blank" rel="noopener">Tor Browser</a> from official source only</li>
+              <li>Use <a href="https://tails.boum.org" target="_blank" rel="noopener">Tails OS</a> for maximum anonymity</li>
+              <li>Never log into personal accounts over Tor</li>
+              <li>Use a VPN + Tor (VPN first, then Tor)</li>
+              <li>Disable JavaScript in Tor Browser</li>
+              <li>Never download or execute files</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🔍 Dark Web Search Engines</h4>
+            <ul class="checklist">
+              <li><a href="https://ahmia.fi" target="_blank" rel="noopener">Ahmia.fi</a> — clearnet access to hidden services</li>
+              <li><a href="https://darksearch.io" target="_blank" rel="noopener">DarkSearch.io</a> — .onion search engine</li>
+              <li><a href="https://intelx.io" target="_blank" rel="noopener">Intelligence X</a> — pastes &amp; dark web content</li>
+              <li>Torch (onion) — oldest Tor search engine</li>
+              <li>Haystak (onion) — 1.5B indexed pages</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>📊 What to Look For</h4>
+            <ul class="checklist">
+              <li>Mentions of target domain/email on paste sites</li>
+              <li>Leaked credentials in dark web markets</li>
+              <li>Company data in breach forums</li>
+              <li>Infrastructure overlap (clearnet ↔ darknet)</li>
+              <li>Communication channels (forums, chat servers)</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🔗 Clearnet Resources</h4>
+            <ul class="checklist">
+              <li><a href="https://intelx.io" target="_blank" rel="noopener">IntelX</a> — indexes dark web without Tor</li>
+              <li><a href="https://dehashed.com" target="_blank" rel="noopener">DeHashed</a> — breach credential search</li>
+              <li><a href="https://haveibeenpwned.com" target="_blank" rel="noopener">HIBP</a> — email breach notification</li>
+              <li><a href="https://www.onionscan.org" target="_blank" rel="noopener">OnionScan</a> — hidden service scanner</li>
+              <li>DarkOwl Vision — commercial dark web index</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CORPORATE OSINT ===== -->
+    <section class="section-block" id="corporate">
+      <div class="section-header">
+        <div class="section-icon ic-yellow">🏢</div>
+        <h2>Corporate &amp; Business OSINT Guide</h2>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>🔍 Company Research Workflow</h4>
+            <ol class="checklist">
+              <li>Identify registered company name &amp; number</li>
+              <li>Check <a href="https://opencorporates.com" target="_blank" rel="noopener">OpenCorporates</a> for global registrations</li>
+              <li>Search SEC EDGAR / Companies House filings</li>
+              <li>Map subsidiaries, parent companies, shell companies</li>
+              <li>LinkedIn employee count &amp; key personnel</li>
+              <li>Check ICIJ Offshore Leaks database</li>
+              <li>Financial records: Crunchbase, DnB, ZoomInfo</li>
+            </ol>
+          </div>
+          <div class="guide-section">
+            <h4>🌐 Attack Surface Mapping</h4>
+            <ul class="checklist">
+              <li>Run theHarvester/SpiderFoot against domain</li>
+              <li>Enumerate subdomains (Amass, Subfinder, crt.sh)</li>
+              <li>Map IP ranges (RIPE, ARIN, APNIC WHOIS)</li>
+              <li>Identify cloud assets (S3 buckets, Azure blobs)</li>
+              <li>Check GitHub/GitLab for leaked credentials</li>
+              <li>Shodan/Censys for exposed services</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>👥 Employee OSINT</h4>
+            <ul class="checklist">
+              <li>LinkedIn employee enumeration</li>
+              <li>Cross-reference with breach databases</li>
+              <li>Hunter.io email format discovery</li>
+              <li>GitHub profile search by company email</li>
+              <li>Conference talks, papers, publications</li>
+              <li>Social media persona analysis</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📧 Email Pattern Discovery</h4>
+            <div class="code-block">
+<button class="copy-btn">Copy</button>
+<span class="comment"># Common email formats to try</span>
+firstname@company.com
+f.lastname@company.com
+firstname.lastname@company.com
+f_lastname@company.com
+firstnamelastname@company.com
+
+<span class="comment"># Verify with Hunter.io API</span>
+<span class="cmd">curl</span> "https://api.hunter.io/v2/email-verifier?email=<span class="val">test@company.com</span>&api_key=<span class="val">API_KEY</span>"</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OPSEC ===== -->
+    <section class="section-block" id="opsec">
+      <div class="section-header">
+        <div class="section-icon ic-green">🛡️</div>
+        <h2>Operational Security (OPSEC) for Investigators</h2>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>🖥️ Isolated Investigation Environment</h4>
+            <ul class="checklist">
+              <li>Use a dedicated virtual machine (VirtualBox / VMware)</li>
+              <li>Use a VPN with no-logs policy for all research</li>
+              <li>Consider Tails OS for the most sensitive cases</li>
+              <li>Create throwaway accounts for research</li>
+              <li>Never mix personal and professional accounts</li>
+              <li>Use a separate browser profile or Tor Browser</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🔒 Account &amp; Identity Hygiene</h4>
+            <ul class="checklist">
+              <li>Create research personas with fake identities</li>
+              <li>Use temporary/disposable email services</li>
+              <li>Use virtual phone numbers (Twilio, TextNow)</li>
+              <li>Store credentials in a password manager</li>
+              <li>Enable 2FA on all research accounts</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>🌐 Browser OPSEC</h4>
+            <ul class="checklist">
+              <li>Use a <strong>dedicated browser</strong> for research only</li>
+              <li>Disable WebRTC (leaks real IP)</li>
+              <li>Use browser fingerprint protection (Brave/Firefox)</li>
+              <li>Clear cookies after each session</li>
+              <li>Block trackers with uBlock Origin</li>
+              <li>Use private/incognito mode by default</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📝 Documentation Best Practices</h4>
+            <ul class="checklist">
+              <li>Screenshot everything with timestamps</li>
+              <li>Archive pages with archive.ph before they disappear</li>
+              <li>Use Hunchly for automatic page capture</li>
+              <li>Note your methodology for reproducibility</li>
+              <li>Store all evidence in encrypted storage (VeraCrypt)</li>
+              <li>Maintain a detailed investigation log</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUICK REFERENCE CHEATSHEET ===== -->
+    <section class="section-block" id="cheatsheet">
+      <div class="section-header">
+        <div class="section-icon ic-orange">📋</div>
+        <h2>OSINT Quick Reference Cheatsheet</h2>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="guide-section">
+            <h4>🔎 Given an Email Address</h4>
+            <ul class="checklist">
+              <li>→ HIBP + DeHashed (breaches)</li>
+              <li>→ Hunter.io + Snov.io (company &amp; format)</li>
+              <li>→ Epieos (linked Google account)</li>
+              <li>→ EmailRep (reputation &amp; activity)</li>
+              <li>→ Holehe (social media registration)</li>
+              <li>→ Google: <code style="color:var(--accent)">"email@example.com"</code></li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>👤 Given a Full Name</h4>
+            <ul class="checklist">
+              <li>→ Google + Bing advanced search</li>
+              <li>→ LinkedIn + social media search</li>
+              <li>→ Spokeo + Pipl + WhitePages</li>
+              <li>→ Zabasearch + BeenVerified</li>
+              <li>→ Court records (PACER, CourtListener)</li>
+              <li>→ Wayback Machine (archived profiles)</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>📱 Given a Phone Number</h4>
+            <ul class="checklist">
+              <li>→ Truecaller (caller ID lookup)</li>
+              <li>→ Spy Dialer (owner &amp; carrier)</li>
+              <li>→ NumLookup + WhitePages Reverse</li>
+              <li>→ Google: <code style="color:var(--accent)">"555-123-4567"</code></li>
+              <li>→ Thatsthem.com reverse lookup</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="guide-section">
+            <h4>🌐 Given a Domain</h4>
+            <ul class="checklist">
+              <li>→ WHOIS (who.is, DomainTools)</li>
+              <li>→ DNSDumpster (subdomain map)</li>
+              <li>→ crt.sh (certificate transparency)</li>
+              <li>→ ViewDNS (reverse IP, DNS history)</li>
+              <li>→ theHarvester (email, subdomain harvest)</li>
+              <li>→ Shodan/Censys (open ports &amp; services)</li>
+              <li>→ VirusTotal + URLScan (malware/behavior)</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🏷️ Given a Username</h4>
+            <ul class="checklist">
+              <li>→ Sherlock (300+ site check)</li>
+              <li>→ Maigret (3000+ site check)</li>
+              <li>→ WhatsMyName.app</li>
+              <li>→ Namechk + KnowEm</li>
+              <li>→ UserSearch.org</li>
+              <li>→ Google: <code style="color:var(--accent)">"username" -site:known.com</code></li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h4>🖼️ Given an Image</h4>
+            <ul class="checklist">
+              <li>→ Yandex Images (best for faces)</li>
+              <li>→ Google Images reverse search</li>
+              <li>→ TinEye (exact match search)</li>
+              <li>→ ExifTool (GPS &amp; metadata)</li>
+              <li>→ FotoForensics (manipulation check)</li>
+              <li>→ PimEyes (face recognition)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OSINT Hub</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#social">Social Media</a></li>
+        <li><a href="#dorks">Google Dorks</a></li>
+        <li><a href="#images">Image Analysis</a></li>
+        <li><a href="#darkweb">Dark Web</a></li>
+        <li><a href="#opsec">OPSEC</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal Notice</h4>
+      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6">All guides are for educational purposes. OSINT must be conducted ethically and legally. Always obtain proper authorization before investigating individuals or organizations.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 OSINT Hub</span>
+    <span>Made with ❤️ for the OSINT community</span>
+  </div>
+</footer>
+
+<button id="back-to-top" title="Back to top">↑</button>
+<script src="js/app.js"></script>
+</body>
+</html>
